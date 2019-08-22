@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+int main (void){
+//girilen bir sayiyiya en yakin asal sayiyi bulma kodu
+printf("lutfen bir sayi giriniz:");
+int sayi,k,a,b,max,min=2,bayrak=0;
+scanf("%d",&sayi);
+for(k=2;k<sayi;k++){
+
+if(sayi%k==0&&sayi != k)
+{
+printf("Girdiginiz Sayi Bir Asal Bir Sayi Degildir\n");
+	break;}
+	}
+	a=sayi;
+	b=sayi;
+	for(k=2;k<a;a--){	
+	bayrak=0;
+	for(k=2;k<a;k++)
+	{
+	if(a%k==0){
+	bayrak++;
+}
+}
+	if(bayrak==0 && a>=min){
+	min=a;}
+k=2;}
+printf("girdiginiz sayidan daha kucuk en buyuk asal sayi %d dir\n",min);
+	for(k=2;k<b;b++){	
+	bayrak=0;
+	for(k=2;k<b;k++)
+	{
+	if(b%k==0){
+	bayrak++;
+}
+	 
+}
+	if(bayrak==0 && b>=max){
+	max=b;
+	break;}
+	k=2;
+}
+	printf("girdiginiz sayiyadan buyuk en kucuk asal sayi %d dir",max);	
+
+	return(0);
+
+}
